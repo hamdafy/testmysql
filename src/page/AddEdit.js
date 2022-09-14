@@ -21,7 +21,7 @@ const AddEdit = () => {
       toast.error("pleas  ")
     }else{
       axios
-      .post("http://localhost:5001/api/post",{
+      .post("https://hamzassql.herokuapp.com/api/post",{
         name,
         email,
         contact,

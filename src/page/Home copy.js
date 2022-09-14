@@ -11,7 +11,7 @@ import axios from "axios"
 const Home = () => {
     const [data,setData]=useState([]);
     const loadData = async() =>{
-        const response = await axios.get("https://hamzassql.herokuapp.com/api/get");
+        const response = await axios.get("http://localhost:5001/api/get");
         setData(response.data);
 
     };
@@ -22,7 +22,7 @@ const Home = () => {
 
     const deleteContact = (id) =>{
       if(window.confirm(" bghiti vrm tsuprimer")){
-        axios.delete(`https://hamzassql.herokuapp.com/api/remove/${id}`);
+        axios.delete(`http://localhost:5001/api/remove/${id}`);
         toast.success("erfolgereich deleted ");
        setTimeout(() => loadData(),500   );
          
